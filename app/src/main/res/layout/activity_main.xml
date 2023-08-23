@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/NameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/AgeEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -46,13 +46,13 @@
         android:ems="10"
         android:fontFamily="@font/arsenal_bold_italic"
         android:hint="Age"
-        android:inputType="text"
+        android:inputType="number"
         android:textColorHint="@color/text_secondary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/NameEditText" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/HobbyEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
         android:inputType="text"
         android:textColorHint="@color/text_secondary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
 
     <Button
         android:id="@+id/button"
@@ -73,6 +73,7 @@
         android:layout_marginBottom="24dp"
         android:backgroundTint="@color/accent"
         android:text="Button"
+        android:onClick="switchScreens"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

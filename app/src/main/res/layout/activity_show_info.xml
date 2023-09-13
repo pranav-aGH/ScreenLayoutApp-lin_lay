@@ -6,46 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".ShowInfoActivity">
 
-    <TextView
-        android:id="@+id/infoNameText"
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="86dp"
-        android:layout_marginTop="96dp"
-        android:background="@color/primary_light"
-        android:fontFamily="@font/arsenal_bold_italic"
-        android:gravity="center|center_vertical"
-        android:text="TextView"
-        android:textColor="@color/text_primary"
-        android:textSize="@dimen/header_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/infoAgeText"
-        android:layout_width="match_parent"
-        android:layout_height="86dp"
-        android:layout_marginTop="104dp"
-        android:background="@color/primary_light"
-        android:fontFamily="@font/arsenal_bold_italic"
-        android:gravity="center|center_vertical"
-        android:text="TextView"
-        android:textColor="@color/text_primary"
-        android:textSize="@dimen/header_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoNameText" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/to" />
 
-    <TextView
-        android:id="@+id/infoHobbyText"
-        android:layout_width="match_parent"
-        android:layout_height="86dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/primary_light"
-        android:fontFamily="@font/arsenal_bold_italic"
-        android:gravity="center|center_vertical"
-        android:text="TextView"
-        android:textColor="@color/text_primary"
-        android:textSize="@dimen/header_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoAgeText" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subject" />
+
+        <Button
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/send" />
+
+
+        <Button
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/Click for Omkar" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

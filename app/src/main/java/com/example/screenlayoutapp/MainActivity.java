@@ -1,6 +1,7 @@
 package com.example.screenlayoutapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +9,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
+    ConstraintLayout mainLayout;
+    int snackBarCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainLayout = findViewById(R.id.mainLayout);
+        snackBarCount = 0;
     }
     /*
     Create a method that can be called when the user clicks on the button
@@ -34,12 +41,26 @@ public class MainActivity extends AppCompatActivity {
         EditText hobbyET = findViewById((R.id.HobbyEditText));
         String hobby = hobbyET.getText().toString();
 
-        String fullText = name + ", " + age + "\n" + hobby;
-        Log.i("Omkar", "user input: "  + fullText);
-
-        //don't forget to CALL this method with the OnClick attribute
-        //if the method name is greyed out, it is NOT being called
-
         Intent intent = new Intent(this, ShowInfoActivity.class);
+        intent.putExtra("NAMETEXT", name);
+        intent.putExtra("AGETEXT", age);
+        intent.putExtra("HOBBYTEXT", hobby);//optional
+        startActivity(intent); //switches screens to ShowInfoActivity
+
     }
+
+    public void snackbarClicked(View v) {
+        Snackbar.make(mainLayout, "How many snackbars?", Snackbar.LENGTH_LONG)
+                .setAction("Answer", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        snackBarCount++;
+                        Snackbar.make(mainLayout, "Count: " + snackBarCount,
+                                        Snackbar.LENGTH_SHORT)
+                                .show();
+                    }
+                })
+                .show();
+    }
+
 }

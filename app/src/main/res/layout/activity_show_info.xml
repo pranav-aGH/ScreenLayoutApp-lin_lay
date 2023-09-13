@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".ShowInfoActivity">
 
+    <TextView
+        android:id="@+id/infoNameText"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/primary_light"
+        android:fontFamily="@font/arsenal_bold_italic"
+        android:gravity="center|center_vertical"
+        android:text="TextView"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/header_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/infoAgeText"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="104dp"
+        android:background="@color/primary_light"
+        android:fontFamily="@font/arsenal_bold_italic"
+        android:gravity="center|center_vertical"
+        android:text="TextView"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/header_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoNameText" />
+
+    <TextView
+        android:id="@+id/infoHobbyText"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/primary_light"
+        android:fontFamily="@font/arsenal_bold_italic"
+        android:gravity="center|center_vertical"
+        android:text="TextView"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/header_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoAgeText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
